@@ -74,7 +74,7 @@ class MoveSequence(models.Model):
     ending_position = models.ForeignKey(
         Move, blank=True, null=True,
         on_delete=models.CASCADE,
-        related_name='ending_position',
+        related_name='position_10',
     )
 
     def __str__(self):

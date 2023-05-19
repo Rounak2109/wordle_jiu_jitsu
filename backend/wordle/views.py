@@ -34,7 +34,7 @@ def get_sequence(game_id):
         sequence.position_9,
         sequence.ending_position,
     ]
-    complete_sequence = [to_dict(obj) for obj in positions]
+    complete_sequence = [to_dict(obj) for obj in positions if obj]
     sequence_to_fill = complete_sequence[1:-1].copy()
     random.shuffle(sequence_to_fill)
     return complete_sequence, sequence_to_fill
